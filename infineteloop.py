@@ -1,5 +1,5 @@
-n = 10
+n = 1000
 while True :
-  print(n,end=" ")
-  n=n-1
-print("done"
+  print(n,end="  ")
+  n=n-2
+print("done ")
