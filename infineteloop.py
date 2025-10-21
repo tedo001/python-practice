@@ -1,4 +1,4 @@
-n = 100
+n = 10
 while True :
   print(n,end="  ")
   n=n-2
