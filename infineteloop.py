@@ -1,5 +1,2 @@
-n = 10
-while True :
-  print(n,end="  ")
-  n=n
- print("done ")
+name = int(input('enter your name:'))
+print("cantidate name:",name)
