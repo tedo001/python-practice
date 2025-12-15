@@ -1,5 +1,4 @@
+def greet(name, age):
+    print("Hello", name, "Age:", age)
 
-def run():
-    print("running")
-    print("going")
-run()
+greet("Tedo", 20)
