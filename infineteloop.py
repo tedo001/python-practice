@@ -1,2 +1,2 @@
-x=10
-print(17  **1)
+for i in range(2, 11, 2):
+    print(i)
