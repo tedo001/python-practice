@@ -1,4 +1,3 @@
-def greet(name, age):
-    print("Hello", name, "Age:", age)
-
-greet("Tedo", 20)
+def run(name1,age):
+    print("hello",name1,"age:",age)
+run('mani',19)
