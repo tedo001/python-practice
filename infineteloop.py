@@ -1,3 +1,7 @@
-def run(name1,age):
-    print("hello",name1,"age:",age)
-run('mani',19)
+def shownname(names):
+    for name in names:
+        print(name)
+    for name in names:
+        print(len(name))
+mynames =['mani','maddy']
+shownname(mynames)
