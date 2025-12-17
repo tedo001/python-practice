@@ -1,6 +1,7 @@
-fruits=[]
-print("fruit list ")
+a=[]
 for i in range(5):
-    num=str(input("enter a fruit list:"))
-    fruits.append(num)
-print(fruits)
+    number=int(input("enter number:"+str(i+1)))
+    a.append(number)
+print(a)
+
+
