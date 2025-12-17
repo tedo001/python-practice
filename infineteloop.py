@@ -1,7 +1,6 @@
-a=[]
-for i in range(5):
-    number=int(input("enter number:"+str(i+1)))
-    a.append(number)
-print(a)
+import numpy as np
 
+arr=np.array([[[['a''b''c'],
+              ['d''e''f'],['g''h''i']]]])
+print(arr[0][0][1])
 
