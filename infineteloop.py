@@ -7,3 +7,4 @@ arr=np.array([[['a','b','c'],['d','e','f'],['g','h','i']],
 word = arr[0,0,0]+arr[1,2,0]+arr[1,2,0]+arr[1,0,2]+arr[0,1,1]
 
 print(word)
+print(arr.shape)#3lAYER,3ROW,3COLOUM
