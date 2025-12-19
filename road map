@@ -1,0 +1,7 @@
+                 AI Model
+                   ↑
+           Scikit-learn / PyTorch
+                   ↑
+          Pandas (tables, datasets)
+                   ↑
+           NumPy (arrays, math)
