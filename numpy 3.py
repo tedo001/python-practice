@@ -1,3 +1,4 @@
+
 a=[]
 print("enter 10 numbers:")
 for i in range(5):
