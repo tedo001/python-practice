@@ -6,3 +6,4 @@ arr2 = np.array([
               ])
 print(arr2[1])#row slicing
 print(arr2[:, 1])# COLUM slicing
+print(arr2[0:2, 1:3])# extract subarray
