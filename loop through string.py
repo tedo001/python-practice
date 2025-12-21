@@ -1,8 +1,4 @@
-fruit = 'banana'
-for letter in fruit:
-    print(letter)
- index =0
- while index < len(fruit):
-     letter = fruit[index]
-     print(letter)
-     index = index + 1
+sum = 0
+for nun in range(1,5):
+    sum = sum + 1
+print(sum)
