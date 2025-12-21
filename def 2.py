@@ -17,3 +17,13 @@ print("case")
 sums(add=10,sub=20)
 print("\ncase2")
 sums(add=21,sub=20)
+####################################
+def nameAge(name, age):
+    print("Hi, I am", name)
+    print("My age is ", age)
+
+print("Case-1:")
+nameAge("Suraj", 27)
+
+print("\nCase-2:")
+nameAge(27, "Suraj")
