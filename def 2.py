@@ -10,3 +10,10 @@ def todo(eating,studing):
 todo(eating=10,studing=20)
 todo(studing=20,eating=10)
 ###################################
+def sums(add,sub):
+    print(add,sub)
+    print(add+sub)
+print("case")
+sums(add=10,sub=20)
+print("\ncase2")
+sums(add=21,sub=20)
