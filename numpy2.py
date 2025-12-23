@@ -8,7 +8,7 @@ arr = np.array([
 
 word = ""
 
-n = int(input("How many letters do you want? "))
+n = int(input("How many letters do you want:"))
 
 for i in range(n):
     print(f"Enter indexes for letter {i+1}")
