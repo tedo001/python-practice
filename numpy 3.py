@@ -1,5 +1,5 @@
 set=input("enter the element:")
-rev=""
+rev=" "
 for i in set:
     rev=i+rev
 print(rev)
