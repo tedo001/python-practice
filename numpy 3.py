@@ -1,8 +1,6 @@
 
-a=[]
-print("enter 10 numbers:")
-for u in range(5):
-    num=int(input("enter num:"))#+str(i+1)
-    a.append(num)
-    print(u)
-print(a)
+set=input("enter the element:")
+rev=""
+for i in set:
+    rev=i+rev
+print(rev)
