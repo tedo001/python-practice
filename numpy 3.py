@@ -1,4 +1,3 @@
-
 set=input("enter the element:")
 rev=""
 for i in set:
