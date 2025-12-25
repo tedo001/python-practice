@@ -10,7 +10,7 @@ doc = SimpleDocTemplate(file_path, pagesize=A4)
 styles = getSampleStyleSheet()
 
 title = Paragraph(
-    "<b>30-Day Study & Build Todo List (Math • Python • CI/CD • AI Startup)</b>",
+    "<b>tedo todo list</b>",
     styles["Title"]
 )
 
@@ -18,12 +18,12 @@ table_data = [
     ["Day", "Focus Area", "Topics / Tasks", "Status"],
 ]
 
-for day in range(1, 31):
+for day in range(1, 365):
     table_data.append([
         f"Day {day}",
         "",
         "",
-        "☐ Done / ☐ Pending"
+        "☐ Done"
     ])
 
 table = Table(table_data, colWidths=[50, 100, 220, 120])
