@@ -1,12 +1,12 @@
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
-from reportlab.lib.pagesizes import A4
+from reportlab.lib.pagesizes import A2
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
 # ✅ CHANGE THIS PATH
 file_path = "D:/New folder/python-practice/30_Day_AI_Study_Todo_List.pdf"
 
-doc = SimpleDocTemplate(file_path, pagesize=A4)
+doc = SimpleDocTemplate(file_path, pagesize=A2)
 styles = getSampleStyleSheet()
 
 title = Paragraph(
@@ -18,15 +18,15 @@ table_data = [
     ["Day", "Focus Area", "Topics / Tasks", "Status"],
 ]
 
-for day in range(1, 365):
+for day in range(1, 366):
     table_data.append([
         f"Day {day}",
         "",
         "",
-        "☐ Done"
+        "      ☐ Done"
     ])
 
-table = Table(table_data, colWidths=[50, 100, 220, 120])
+table = Table(table_data, colWidths=[50*30, 100, 220, 120])
 
 table.setStyle(TableStyle([
     ("BACKGROUND", (0,0), (-1,0), colors.lightgrey),
