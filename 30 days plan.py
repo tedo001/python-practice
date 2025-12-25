@@ -3,12 +3,16 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
-file_path = "/mnt/data/30_Day_AI_Study_Todo_List.pdf"
+# ✅ CHANGE THIS PATH
+file_path = "D:/New folder/python-practice/30_Day_AI_Study_Todo_List.pdf"
 
 doc = SimpleDocTemplate(file_path, pagesize=A4)
 styles = getSampleStyleSheet()
 
-title = Paragraph("<b>30-Day Study & Build Todo List (Math • Python • CI/CD • AI Startup)</b>", styles["Title"])
+title = Paragraph(
+    "<b>30-Day Study & Build Todo List (Math • Python • CI/CD • AI Startup)</b>",
+    styles["Title"]
+)
 
 table_data = [
     ["Day", "Focus Area", "Topics / Tasks", "Status"],
@@ -36,4 +40,4 @@ table.setStyle(TableStyle([
 
 doc.build([title, table])
 
-file_path
+print("✅ PDF created successfully!")
