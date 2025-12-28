@@ -1,4 +1,4 @@
-from numbers import Numbers   # ✅ correct import
+from numbers import Numbers
 
 class LinkedList:
     def __init__(self):
