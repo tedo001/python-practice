@@ -1,4 +1,5 @@
-from numbers import numbers:
+from numbers import Numbers   # ✅ correct import
+
 class LinkedList:
     def __init__(self):
         self.calc = Numbers()
@@ -6,6 +7,8 @@ class LinkedList:
     def calculate(self, x, y):
         print("Add:", self.calc.add(x, y))
         print("Sub:", self.calc.sub(x, y))
+        print("Mul:", self.calc.multiply(x, y))
+        print("Div:", self.calc.divide(x, y))
 
 
 ll = LinkedList()
