@@ -1,4 +1,4 @@
-a = 3
-b = 5
-c = (a == 3 ) and ( b == 5 ) or ( a != 3 )
-print ( c )
+X=300
+Y= 17
+X%=Y
+print(X)
