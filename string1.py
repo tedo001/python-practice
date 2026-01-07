@@ -1,5 +1,4 @@
-d='234'
-
-print(type(d))
-i=int(d)
-print(type(i!=d))
+a = 3
+b = 5
+c = (a == 3 ) and ( b == 5 ) or ( a != 3 )
+print ( c )
