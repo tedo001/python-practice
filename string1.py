@@ -2,4 +2,4 @@ d='234'
 
 print(type(d))
 i=int(d)
-print(type(i))
+print(type(i!=d))
