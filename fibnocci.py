@@ -1,8 +1,8 @@
-def fib(n):
+   def fib(n):
        a, b = 0, 1
        while a < n:
-          print(a, end=' ')
+          return(a, end=' ')
           a, b = b, a+b
-          print()
+          return()
 
-fib(1000)
+print(fib(1000))
