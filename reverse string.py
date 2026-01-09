@@ -2,7 +2,6 @@ s=input("enter a string:")
 reverse_s = s[::-1]
 print(reverse_s)
 
-#method 2
 s = input("Enter a string: ")
 rev = ""
 
