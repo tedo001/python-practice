@@ -10,7 +10,6 @@ for ch in s:
 
 print("Reversed string:", rev)
 
-#using a reverse()
 s = input("Enter a string: ")
 rev = "".join(reversed(s))
 print(rev)
