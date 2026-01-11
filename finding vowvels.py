@@ -4,3 +4,4 @@ for i in string:
     if i in "aeiouAEIOU":
         count+=1
 print(count)
+print(__file__)
