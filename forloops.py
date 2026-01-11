@@ -1,5 +1,4 @@
-r=int(input())
-
-for i in range(r):
-    for j in range(2):
-        print(j+1,"hi")
+for i in range(10):
+    if i == 5:
+        break
+    print(i,end="")
