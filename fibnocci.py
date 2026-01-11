@@ -6,3 +6,4 @@ def fib(n):
           print()
 
 fib(1000)
+print(__file__)
