@@ -1,7 +1,7 @@
 string=input("enter a string:")
 rev=""
-for i in string:#1.2
-    rev=i+rev#1+"1",
+for i in string:
+    rev=i+rev
 
 if string==rev:
     print("string is a palindrome:",string)
