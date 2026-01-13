@@ -1,6 +1,6 @@
 string=input("enter a string:")
 rev=""
-for i in string:
+for i in range.string:
     rev=i+rev
 
 if string==rev:
