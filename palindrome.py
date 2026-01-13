@@ -1,4 +1,4 @@
-string=input("enter a string:")
+string=input("enter a String:")
 rev=""
 for i in string:
     rev=i+rev
