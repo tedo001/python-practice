@@ -8,13 +8,3 @@ if string==rev:
 else:
     print("string is not a palindrome")
 
-    #s = input("Enter a string: ")
-    #rev = ""
-
-    #for ch in s:
-     #   rev = ch + rev
-
-    #if s == rev:
-     #   print("Palindrome")
-    #e#lse:
-     #   print("Not Palindrome")
