@@ -1,5 +1,5 @@
 string=input("enter a string:")
-rev=""#"2,1"
+rev=""
 for i in string:#1.2
     rev=i+rev#1+"1",
 
