@@ -5,4 +5,3 @@ class data:
          return fand
 d1=data()
 f="sam"
-print(d1.data_1(f))
