@@ -1,7 +1,9 @@
 class data:
      def data_1(self,fand):
 
-         fand={"man","han","gago"}
+         fand={"man","han","gago","fish","cons","fandom","manisk","cows","cow","fish",fand.lower(),fand.upper()}
+
+
          return fand
 d1=data()
 
