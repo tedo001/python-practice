@@ -10,4 +10,4 @@ class linkedlist:
 
 
 num1=linkedlist()
-
+print(num1.calc)
