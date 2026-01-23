@@ -37,7 +37,3 @@ class Solution(object):
 
             else:
                 left = cut1 + 1
-s1=Solution()
-A=list(input())
-B=list(input())
-print(s1.findMedianSortedArrays(A,B))
