@@ -1,20 +1,19 @@
-num=list(input("enter a shorted num:"))
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
 
-pivot=num[0]
+    pivot = arr[0]
+    left = []
+    right = []
 
-shorted=[]
-for i in range(len(num)):
+    for i in arr[1:]:
+        if i <= pivot:
+            left.append(i)
+        else:
+            right.append(i)
 
-     if num[i]>pivot:
-        shorted.append(num[i])
-        print(shorted)
-     else:
-        print()
+    return quick_sort(left) + [pivot] + quick_sort(right)
 
-        """for n in range(len(num2)):
-    if num2[n]>pivot2:
-        pivot2=num2[n]
-    else:
-        num2=pivot2.append(num2[n])"""
-
-
+num = list(map(int, input("Enter a number: ")))
+num.sort()
+print("Sorted digits:", num)
