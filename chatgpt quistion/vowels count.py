@@ -1,10 +1,8 @@
+sttr = "hello world"
+count = 0
 
+for ch in sttr:
+    if ch in "aeiou":
+        count += 1
 
-sttr="hello world"
-num=0
-for i in range(len(sttr)):
-    if sttr[i] in "aeiou":
-       num=num+1
-       continue
-
-print(num)
+print(count)
