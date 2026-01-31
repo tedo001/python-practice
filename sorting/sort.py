@@ -1,6 +1,3 @@
-from scipy.stats import false_discovery_control
-
-
 def sort(num):
      pivot=num[0]
      left=[]
@@ -12,6 +9,6 @@ def sort(num):
              right.append(num[i])
          else:
              return num
-     return left + pivot +right
-d="876392"
-sort(d)
+     return left + pivot + right
+num="876392"
+sort(num)
