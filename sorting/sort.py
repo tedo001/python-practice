@@ -1,10 +1,17 @@
- def sort(num):
+from scipy.stats import false_discovery_control
+
+
+def sort(num):
      pivot=num[0]
      left=[]
      right=[]
-     for i in range(len(num)-1):
-         if num[i+1]<pivot:
+     for i in range(len(num)):
+         if num[i]>pivot:
              left.append(num[i])
-             right.append(num[i+1])
-     return left+right
-
+         elif num[i]<pivot:
+             right.append(num[i])
+         else:
+             return num
+     return left + pivot +right
+d="876392"
+sort(d)
