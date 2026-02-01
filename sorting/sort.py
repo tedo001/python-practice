@@ -1,14 +1,12 @@
-def sort(num):
-     pivot=num[0]
-     left=[]
-     right=[]
-     for i in range(len(num[1:])):
-         if num[i]>pivot:
-             left.append(num[i])
-         elif num[i]<pivot:
-             right.append(num[i])
-         else:
-             return num
-     return sort.left + sort.pivot + sort.right
-num="876392"
-sort(num)
+def sort(nums1,nums2):
+    num3 = nums1+nums2
+    num3.sort()
+    count = []
+    for i in num3:
+        count = count + i
+
+    return count / len(num3)
+num1 =list(input())
+num2 =list(input())
+
+sort(num1,num2)
