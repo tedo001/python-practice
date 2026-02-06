@@ -1,21 +1,21 @@
-size=int(input())
+size=str(input())
 m=[]
 n=[]
 j=[]
-for i in range(size):
+for i in range(len(size)):
     if i==0:
-        m.append(int(input()))
+        q=int(input())
+        m.append(q)
         continue
     elif i==1:
-        n.append(int(input()))
+        o=int(input())
+        n.append(o)
+        continue
     else:
-        j.append(int(input()))
-
-
-
-n.append(int(input()))
-j.append(int(input()))
-m2=m[0]*m[1]
-n2=n[0]*n[1]
-j2=j[0]*j[1]
+        h=(input())
+        j.append(h)
+        break
+m2=m[0]*m[1]+1
+n2=n[0]*n[1]+1
+j2=j[0]*j[1]+1
 print(m2,n2,j2)
