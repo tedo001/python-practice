@@ -9,8 +9,9 @@ for i in range(len(size)):
         m.append(q)
         continue
     elif i==1:
-        o=int(input())
-        n.append(o)
+        o=str(input())
+        n.append(o[0]+o[1])
+        print(n)
         continue
     else:
         h=(input())
