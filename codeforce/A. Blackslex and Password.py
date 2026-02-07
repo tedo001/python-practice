@@ -1,15 +1,6 @@
-size = int(input("Enter size of array: "))
+t = int(input())
 
-results = []
+for _ in range(t):
+    k, x = map(int, input().split())
+    print(k * x + 1)
 
-for i in range(size):
-    value = input(f"Enter value {i+1}: ")
-    digit_sum = 0
-
-    for ch in value:
-        digit_sum += int(ch)
-
-    results.append(digit_sum + 1)
-
-for res in results:
-    print(res)
