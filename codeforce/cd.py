@@ -1,4 +1,4 @@
-t = int(input())
-for _ in range(t):
-    k, x = map(int, input().split())
-    print(k * x + 1)
+size=int(input())
+for i in range(size):
+    a,b=map(input().split())
+    print()
