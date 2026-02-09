@@ -1,11 +1,8 @@
-size=int(input())
-h="yes"
-n="no"
-for i in range(size):
-    a,b,c,d=str(input())
-    if a==b==c==d:
-        h="yes"
+t = int(input())
+
+for _ in range(t):
+    a, b, c, d = map(int, input().split())
+    if a == b == c == d:
+        print("YES")
     else:
-        r="no"
-print(h)
-print(n)
+        print("NO")
