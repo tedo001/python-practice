@@ -1,6 +1,6 @@
 t = int(input())
 
-for _ in range(t):
+for j in range(t):
     a, b, c, d = map(int, input().split())
     if a == b == c == d:
         print("YES")
