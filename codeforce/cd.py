@@ -1,4 +1,4 @@
 size=int(input())
 for i in range(size):
-    a,b=map(int(input().split()))
+    a,b=int((map(input().split())))
     print(a*b+1)
