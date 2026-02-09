@@ -4,6 +4,8 @@ n="no"
 for i in range(size):
     a,b,c,d=str(input())
     if a==b==c==d:
-        return h
+        h="yes"
     else:
-        return n
+        r="no"
+print(h)
+print(n)
