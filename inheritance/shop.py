@@ -4,5 +4,5 @@ class shop:
         self.grocery=grocery
         self.sports=sports
     def items(self):
-        havenitem_in_store={"fruits":f"{}"
-                            "grosery":f"{}"}
+        havenitem_in_store={"fruits":self.price,
+                            "grosery":self.prce}
