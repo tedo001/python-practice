@@ -9,7 +9,7 @@ class shop:
         return havenitem_in_store
     def coustomers(self):
         offer="10%"
-        return offer
+        print(offer)
 s=shop()
-s.items()
+s.display()
 s.coustomers()
