@@ -4,7 +4,10 @@ class fruits:
         self.price=price
     def display(self):
         print(self.name,self.price)
+f=fruits("apple",1234)
+
+
 n="apple"
 b=1234
-f=fruits()
-f.display(n,b)
+
+f.display()
