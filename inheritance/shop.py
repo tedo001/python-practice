@@ -3,13 +3,13 @@ class shop(fruits):
     def __inti__(self,grocery,sports):
         self.grocery=grocery
         self.sports=sports
-    def items(self):
-        havenitem_in_store={"fruits":self.price,
-                            "grosery":self.prce}
-        return havenitem_in_store
-    def coustomers(self):
-        offer="10%"
-        print(offer)
-s=shop()
+    def display1(self):
+
+      def coustomers(self):
+         offer="10%"
+         print(offer)
+f=str(input("enter a grocery:"))
+s=str(input("enter a sports:"))
+s=shop(f,s)
 s.display()
-s.coustomers()
+s.display1()
