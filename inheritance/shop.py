@@ -1,5 +1,5 @@
-from inhertance.fruit.py import fruits
-class shop:
+from fruits import fruits
+class shop(fruits):
     def __inti__(self,grocery,sports):
         self.grocery=grocery
         self.sports=sports
