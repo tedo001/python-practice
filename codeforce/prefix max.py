@@ -1,4 +1,4 @@
-a=list(input())
+a=list(map(int,input()))
 size=len(a)
 M=max(a)
 m=[]
@@ -10,6 +10,6 @@ for i in range(size):
           m.insert(i,a[i])
 m.insert(0,M)
 for l in range(size):
-    count=int(M)+count
+    count=M+count
 print(count)
 
