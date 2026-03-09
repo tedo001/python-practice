@@ -10,6 +10,6 @@ for i in range(size):
           m.insert(i,a[i])
 m.insert(0,M)
 for l in range(size):
-    count=M+count
+    count=int(M)+count
 print(count)
 
