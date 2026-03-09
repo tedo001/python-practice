@@ -1,7 +1,12 @@
 a=list(input())
 size=len(a)
+M=max(a)
 m=[]
-count=0
+#count=0
 for i in range(size):
-
-    for j in range(i+1,size):
+      if a[i]==M:
+          continue
+      else:
+          m.insert(i,a[i])
+m.insert(0,M)
+print(m)
