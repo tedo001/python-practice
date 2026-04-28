@@ -1,4 +1,4 @@
-import pandas as pd 
+unimport pandas as pd 
 import matplotlib.pyplot as plt 
 tata_motors=pd.read_csv(r"/content/drive/MyDrive/DataSet/TATAMOTORS.csv") 
 tata_steel=pd.read_csv(r"/content/drive/MyDrive/DataSet/TATASTEEL.csv") 
@@ -227,3 +227,77 @@ print(f"TCS ROI: {sumTCS}")
 roi_dict = {'Tata Motors': sumTM, 'Tata Steel': sumTS, 'TCS': sumTCS}
 best = max(roi_dict, key=roi_dict.get)
 print(f"\nBest Investment: {best} with ROI = {roi_dict[best]}")
+
+
+claude 2
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# ── Sample Data ──────────────────────────────────────────
+data = {
+    "Date": pd.date_range(start="2024-01-01", periods=12, freq="ME"),
+    "TATA_MOTORS": [620, 645, 670, 690, 710, 680, 720, 750, 730, 760, 790, 820],
+    "TATA_STEEL":  [120, 125, 118, 130, 135, 128, 140, 138, 142, 145, 148, 150],
+    "TCS":         [3500,3600,3550,3700,3750,3680,3800,3850,3900,3950,4000,4100],
+}
+
+df = pd.DataFrame(data)
+
+# ── STEP 1: View Data ─────────────────────────────────────
+print("=== HEAD ===")
+print(df.head())
+
+print("\n=== SHAPE ===")
+print(df.shape)
+
+print("\n=== NULL VALUES ===")
+print(df.isnull().sum())
+
+print("\n=== DESCRIPTION ===")
+print(df.describe().round(2))
+
+# ── STEP 2: Price Comparison ──────────────────────────────
+plt.figure(figsize=(12, 5))
+plt.plot(df["Date"], df["TATA_MOTORS"], color="blue",   label="Tata Motors", marker="o")
+plt.plot(df["Date"], df["TATA_STEEL"],  color="gray",   label="Tata Steel",  marker="s")
+plt.plot(df["Date"], df["TCS"],         color="orange", label="TCS",         marker="^")
+plt.title("Stock Price Comparison")
+plt.xlabel("Month")
+plt.ylabel("Price (₹)")
+plt.legend()
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
+
+# ── STEP 3: Monthly Return ────────────────────────────────
+for col in ["TATA_MOTORS", "TATA_STEEL", "TCS"]:
+    df[f"{col}_RETURN%"] = df[col].pct_change() * 100
+
+print("\n=== MONTHLY RETURNS (%) ===")
+print(df[["Date","TATA_MOTORS_RETURN%",
+          "TATA_STEEL_RETURN%","TCS_RETURN%"]].round(2))
+
+# ── STEP 4: ROI Calculation ───────────────────────────────
+print("\n=== ROI (Start → End) ===")
+for col in ["TATA_MOTORS", "TATA_STEEL", "TCS"]:
+    roi = ((df[col].iloc[-1] - df[col].iloc[0]) / df[col].iloc[0]) * 100
+    print(f"  {col:<15}: {roi:.2f}%")
+
+# ── STEP 5: Best Stock ────────────────────────────────────
+rois = {
+    col: ((df[col].iloc[-1] - df[col].iloc[0]) / df[col].iloc[0]) * 100
+    for col in ["TATA_MOTORS", "TATA_STEEL", "TCS"]
+}
+best = max(rois, key=rois.get)
+print(f"\n✅ Best Investment: {best} with ROI = {rois[best]:.2f}%")
+
+# ── STEP 6: ROI Bar Chart ─────────────────────────────────
+plt.figure(figsize=(7, 4))
+plt.bar(rois.keys(), rois.values(),
+        color=["blue","gray","orange"], edgecolor="black")
+plt.title("ROI Comparison (%)")
+plt.xlabel("Stock")
+plt.ylabel("ROI (%)")
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
