@@ -136,3 +136,94 @@ Shares Owned of Tata Motors = 162
 Average Investmentment of 1 share = Rs 407.27
 nInvestment Result:
 Net Unrealised Loss = Rs -17668.9
+
+
+
+claude 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# STEP 1: Import datasets
+tata_motors = pd.read_csv("TATAMOTORS.csv")
+tata_steel = pd.read_csv("TATASTEEL.csv")
+tcs = pd.read_csv("TCS.csv")
+
+# STEP 2: View data & check size
+print(tata_motors.head())
+print(tata_motors.shape)
+
+# STEP 3: Datatypes & null values
+print(tata_motors.info())
+print(tata_motors.isna().sum())
+
+# STEP 4: Check duplicates
+print(tata_motors.duplicated().sum())
+print(tata_steel.duplicated().sum())
+print(tcs.duplicated().sum())
+
+# STEP 5: Description
+print(tata_motors.describe().round(2))
+
+# STEP 6: Drop unwanted columns
+columns_to_drop = ['Trades', 'Deliverable Volume', '%Deliverble']
+tata_motors = tata_motors.drop(['Trades', 'Deliverable Volume', '%Deliverble'], axis=1)
+tata_steel = tata_steel.drop(['Trades', 'Deliverable Volume', '%Deliverble'], axis=1)
+tcs = tcs.drop(['Trades', 'Deliverable Volume', '%Deliverble'], axis=1)
+
+# Convert Date columns
+tata_motors['Date'] = pd.to_datetime(tata_motors['Date'])
+tata_steel['Date'] = pd.to_datetime(tata_steel['Date'])
+tcs['Date'] = pd.to_datetime(tcs['Date'])
+
+# STEP 7: Price Comparison
+plt.figure(figsize=(20, 7))
+plt.plot(tata_motors['Date'], tata_motors['Open'], color='blue', label='Tata Motors')
+plt.plot(tata_steel['Date'], tata_steel['Open'], color='grey', label='Tata Steel')
+plt.plot(tcs['Date'], tcs['Open'], color='orange', label='TCS')
+plt.title("Relation between Tata Motors, Tata Steel and TCS Price")
+plt.xlabel("Year")
+plt.ylabel("Price")
+plt.legend()
+plt.show()
+
+# STEP 8: Volume Comparison
+plt.figure(figsize=(20, 7))
+plt.plot(tata_motors['Date'], tata_motors['Volume'], color='blue', label='Tata Motors')
+plt.plot(tata_steel['Date'], tata_steel['Volume'], color='grey', label='Tata Steel')
+plt.plot(tcs['Date'], tcs['Volume'], color='orange', label='TCS')
+plt.title("Relation between Tata Motors, Tata Steel and TCS Volume")
+plt.xlabel("Year")
+plt.ylabel("Volume")
+plt.legend()
+plt.show()
+
+# STEP 9: Return on Investment (ROI)
+sumTM = 0
+s1 = 0
+for i in range(len(tata_motors)):
+    if tata_motors.loc[i, 'Date'].day == 30:
+        sumTM += tata_motors.loc[i, 'Close'] - tata_motors.loc[i, 'Open']
+        s1 += 1
+
+sumTS = 0
+s2 = 0
+for i in range(len(tata_steel)):
+    if tata_steel.loc[i, 'Date'].day == 30:
+        sumTS += tata_steel.loc[i, 'Close'] - tata_steel.loc[i, 'Open']
+        s2 += 1
+
+sumTCS = 0
+s3 = 0
+for i in range(len(tcs)):
+    if tcs.loc[i, 'Date'].day == 30:
+        sumTCS += tcs.loc[i, 'Close'] - tcs.loc[i, 'Open']
+        s3 += 1
+
+print(f"Tata Motors ROI: {sumTM}")
+print(f"Tata Steel ROI: {sumTS}")
+print(f"TCS ROI: {sumTCS}")
+
+# Best investment
+roi_dict = {'Tata Motors': sumTM, 'Tata Steel': sumTS, 'TCS': sumTCS}
+best = max(roi_dict, key=roi_dict.get)
+print(f"\nBest Investment: {best} with ROI = {roi_dict[best]}")
