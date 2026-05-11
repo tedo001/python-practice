@@ -1,4 +1,4 @@
-unimport pandas as pd 
+import pandas as pd 
 import matplotlib.pyplot as plt 
 tata_motors=pd.read_csv(r"/content/drive/MyDrive/DataSet/TATAMOTORS.csv") 
 tata_steel=pd.read_csv(r"/content/drive/MyDrive/DataSet/TATASTEEL.csv") 
