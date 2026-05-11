@@ -4,7 +4,7 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-
+#using a class solution for object creation 
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         dummy = ListNode(0)
