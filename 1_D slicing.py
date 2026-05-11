@@ -289,7 +289,7 @@ rois = {
     for col in ["TATA_MOTORS", "TATA_STEEL", "TCS"]
 }
 best = max(rois, key=rois.get)
-print(f"\n✅ Best Investment: {best} with ROI = {rois[best]:.2f}%")
+print(f"\n Best Investment: {best} with ROI = {rois[best]:.2f}%")
 
 # ── STEP 6: ROI Bar Chart ─────────────────────────────────
 plt.figure(figsize=(7, 4))
