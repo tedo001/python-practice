@@ -2,6 +2,7 @@
 # location of x in given array arr[low..high] is present,
 # otherwise -1
 def binarySearch(arr, low, high, x):
+#hi thash
 
     # Check base case
     if high >= low:
@@ -36,3 +37,4 @@ if __name__ == '__main__':
         print("Element is present at index", result)
     else:
         print("Element is not present in array")
+print("thash")
