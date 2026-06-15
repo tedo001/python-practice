@@ -1,10 +1,14 @@
 def  twosum(nums,target):
     for i, j in enumerate(nums):
         com = target - j
-        if com in nums and com != nums[i]:
+        if com in nums and com is not  nums[i]:
             ind = nums.index(com)
             return i, ind
-        else:
+        elif com in nums[1:]:
+            nums[:]= nums[1:]
+            c=nums.index(com)
+            return i,c
+
             continue
 
 
