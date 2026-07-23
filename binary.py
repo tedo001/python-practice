@@ -23,7 +23,6 @@ def binarySearch(arr, low, high, x):
         else:
             return binarySearch(arr, mid + 1, high, x)
 
-    # Element is not present in the array
     else:
         return -1
 
