@@ -4,6 +4,6 @@ int main(){
      int c=a;
      a=b;
      b=c;
-     std:: cout << c , a ;
+     std:: cout << "b value is :"b , "a value is :"a ;
      return 0;
 }
