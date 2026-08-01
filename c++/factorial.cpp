@@ -3,8 +3,8 @@
 using namespace std;
 int main()
 {
-
-    int n, total, a ;
+    int total = 1;
+    int n,a ;
     cout << "enter number for factorial :" ;
     cin >> n ;cout<< "\n";
     a = n;
