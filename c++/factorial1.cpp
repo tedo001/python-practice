@@ -7,11 +7,11 @@ int main(){
        cin >> n  ;
        m=n;
        if(m>1){
-         rec = rec*m;
-         return (m-1);
+         //rec = rec*m;
+         return rec*(m-1);// confussion 
        }
-     cout <<"factorial num is :"<<rec<<"of"<<m;
-
+      cout <<"factorial num is :"<<rec<<"of"<<m;
+    
 return 0; 
 }
 
