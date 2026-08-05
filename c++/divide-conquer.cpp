@@ -17,3 +17,4 @@ int main(){
       }
    return 0;
 }
+//simple quistion but it is a step 1 for dc
